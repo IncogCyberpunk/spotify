@@ -1,0 +1,150 @@
+
+*{
+    font-family: "Gotham"
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+
+main{
+    display: flex;
+    gap: 0 5px;
+}
+
+a{
+    font-weight: 600;
+}
+
+p{
+    text-overflow: ellipsis;
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width as needed */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #333; /* Color of the thumb (drag handle) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgb(18,18,18); /* Color of the track (the area where the thumb moves) */
+  }
+  
+
+button{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+   .leftSection{
+    position: absolute;
+    left: -110%;
+    transition: left 1s;
+    z-index: 2;
+    background-color: black;
+    width: fit-content;
+   }
+
+
+   .rightSection{
+    width: 100vw;
+   }
+
+   #closeIcon{
+    display: block;
+   }
+   
+   #playBar,#header{
+    width: 98vw;
+   }
+
+   #hamburgerIcon{
+    display: block;
+    width: 35px;
+   }
+
+   #nav img:not(:first-child){
+    display: none;
+   }
+
+}
+
+
+@media screen and (width < 725px ) {
+    #companyInfo a{
+        font-size: 12px;
+    }
+    #companyInfo{
+        gap: 0 40px;
+    }
+    #links{
+        gap: 0 10px;
+    }
+
+    #playBar{
+        /* position: relative;
+        left: 0px; */
+    }
+}
+
+@media screen and (width < 595px ) and (width >  475px) {
+    #companyInfo{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* MEDIA QUERIES FOR THE HEADER 
+
+
+@media screen and (min-width: 1330px ) and (max-width: 1410px) {
+    #entry{
+        top: 0;
+        left: 80px;
+    }
+}
+
+@media screen and (min-width: 1411px) {
+    #entry{
+        position: relative;
+        right: 30px;
+    }
+}
+
+@media screen and (min-width: 1468px) {
+    #entry{
+        position: relative;
+        right: 30px;
+    }
+}
+
+@media screen and (min-width: 1528px) {
+    #entry{
+        position: relative;
+        right: 30px;
+    }
+}
+
+@media screen and (min-width: 1602px) {
+    #entry{
+        position: relative;
+        right: 30px;
+    }
+}
+
+@media screen and (min-width: 1810px ) and  (max-width: 1920px ) {
+
+    #entry{
+        position: relative;
+        right: 40px;
+    }
+} 
+
+*

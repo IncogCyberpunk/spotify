@@ -1,0 +1,178 @@
+/* LEFT SECTION CSS */
+
+.leftSection{
+    
+}
+
+
+.leftTop,
+.leftBottom {
+    background-color: rgb(18, 18, 18);
+    border-radius: 9px;
+}
+
+.leftTop {
+    height: fit-content;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    margin-bottom: 20px;
+}
+
+.leftTop>div:first-child {
+    justify-content: space-between;
+}
+
+#closeIcon{
+    display: none;
+    position: relative;
+    right: 25px;
+    top: 5px;
+}
+
+.leftTop>div:first-child img {
+    height: 27px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.leftTop>div:not(:nth-child(1)) {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    padding-left: 20px;
+}
+
+.leftTop div:not(:nth-child(1)) img {
+    height: 25px;
+}
+
+.leftTop div:nth-child(3) a {
+    color: rgb(175, 175, 175)
+}
+
+.leftTop div:nth-child(3) :hover {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* LEFT SIDE BOTTOM CSS */
+
+.leftBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.library {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+
+}
+
+.library span span {
+    color: white;
+}
+
+.library img {
+    height: 25px;
+}
+
+#songLibrary {
+    height: 280px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+
+}
+
+#songLibrary ul {
+    padding: 0;
+}
+
+#songLibrary ul li {
+    padding: 0 10px;
+    border: 1px solid rgb(68, 64, 64);
+    border-radius: 9px;
+    margin: 8px;
+
+}
+
+.songCard {
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.songCard>img {
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+
+.info {
+    width: 200px;
+}
+
+#musicName{
+    font-size: 20px;
+}
+
+#musicArtist{
+    font-size: 10px;
+}
+
+.playNow {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.playNow>span {
+    font-size: 12px;
+    text-align: center;
+}
+
+.playNow>img,
+.songCard>img {
+    width: 25px;
+}
+
+
+
+/* LABELS CSS */
+
+#legalLabels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    margin-bottom: 20px;
+
+}
+
+#changeLang {
+    background-color: rgb(18, 18, 18);
+    color: white;
+    border: 1px solid white;
+    padding: 5px 15px;
+    gap: 5px;
+    border-radius: 28px;
+    margin-bottom: 20px;
+
+}
+
+#changeLang img {
+    height: 22px;
+}
+
+#changeLang span {
+    font-weight: bold;
+    line-height: 20px;
+}

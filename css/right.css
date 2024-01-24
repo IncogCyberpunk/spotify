@@ -1,0 +1,274 @@
+/* RIGHT SIDE CSS */
+
+.rightSection {
+    background-color: rgb(18, 18, 18);
+    width: 100vw;
+    border-radius: 9px;
+    position: relative;
+    padding-top: 40px;
+}
+
+#header {
+    /* here width 100% is not working because position fixed takes the element out of the browser window and here only top is specified so it goes to the top of the page but left/right is not specified so it places itself in the browser window from where it actually was before it was fixed, so 100% of the width of it's parent when applied to it stretches it beyond the screen. */
+    width: 73vw;
+    height: 50px;
+    position: fixed;
+    z-index: 11;
+    top: 8px;
+    background-color: black;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#nav {
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+
+#hamburgerIcon{
+    display: none;
+}
+
+
+#signUp {
+    background-color: inherit;
+    color: rgb(160, 160, 160);
+    padding: 20px 25px;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    font-size: 17px;
+    transition: font-size 0.3s ease-in-out;
+}
+
+#signUp:hover {
+    font-size: 19px;
+    color: white;
+
+}
+
+#logIn {
+    border: 1px solid white;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 11px 25px;
+    border-radius: 27px;
+}
+
+#playlistSection {
+    position: relative;
+    z-index: 10;
+    background-color: rgb(18,18,18);
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+#playlistSection>div:first-child {
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+#playlistSection>div:first-child p:first-child {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+#playlistSection>div:first-child p:last-child {
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(160, 160, 160);
+}
+
+#playlistSection>div:first-child p {
+    cursor: pointer;
+}
+
+#playlistSection>div:first-child p:hover {
+    text-decoration: underline;
+}
+
+
+/* PLAYLISTS TO BE PLAYED CSS */
+
+#cards {
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(5, 1fr);
+    padding-left: 20px;
+    gap: 10px;
+}
+
+
+
+#cards>div {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px ;
+    background-color: rgb(21, 21, 21);
+    cursor: pointer;
+    border-radius: 7px;
+    width: 180px;
+    position: relative;
+}
+
+.playButton{
+    position: absolute;
+    top:100px;
+    right:28px;
+    background-color: #1ed760;
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+}
+
+.playButton img{
+    width: 35px;
+}
+
+#cards>div > img {
+    width: 130px;
+    align-self: center;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+#cards>div p {
+    margin: 0;
+    width: 75%;
+    overflow: clip;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    /* margin-left: 23px; */
+}
+
+#cards>div p:first-child {
+    font-weight: bold;
+    font-family: "Gotham"
+}
+
+#cards>div p:last-child {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-family: "Gotham";
+    color: #b3b3b3;
+
+}
+
+
+/* CSS OF THE LINKS STUFF */
+#companyInfo{
+    gap: 0 11vw;
+    margin-bottom: 40px;
+}
+#links{
+    gap: 0 80px;
+}
+
+#links ul{
+    flex-direction: column;
+    gap: 7px;
+}
+
+#links ul a{
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(161, 161, 161);
+}
+
+#socials{
+    gap: 0 20px;
+    padding-top: 25px;
+}
+
+#socials svg{
+    border: 2px solid rgb(41,41,41);
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(41,41,41);
+}
+
+#horizontalLine{
+    width: 90%;
+    height: 1px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.rightSection > p{
+    color: rgb(158,158,158);
+    margin: 40px 0 100px 45px;
+}
+
+/*  PLAYBAR/SEEKBAR  */
+
+#playBar{
+    width: 72%;
+    height: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: 22px;
+    background-color: black;
+    gap: 10px;
+    border-radius: 8px;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+#playSongBtn{
+    cursor: pointer;
+    border-radius: 51%;
+    border: 1px solid white;
+}
+#playBar button{
+    border: none;
+    outline: none;
+    background-color: black;
+}
+
+
+
+#songButtons{
+    margin-bottom: 5px;
+    position: relative;
+    bottom: 5px;
+}
+
+#seekBar{
+    cursor: pointer;
+    height: 5px;
+    width: 92%;
+    border-radius: 8px;
+    background-color: white;
+    position: absolute;
+    bottom: 8px;
+    left: 40px;
+}
+
+#circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(239, 210, 21);
+    position: absolute;
+    top: -7px;
+    left: 0%;
+    transition: left 0.01s ease-in-out;
+}
+
+#songInfo{
+    position: relative;
+    left: 60px;
+    bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#songTime{
+    position: relative;
+    right: 60px;
+    bottom: 10px;
+}

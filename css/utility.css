@@ -1,0 +1,32 @@
+.border{
+    border: 2px solid red;
+}
+
+.flex{
+    display: flex;
+
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.invert{
+    filter: invert(1);
+}
+
+.greyFont{
+    color: rgb(103,103,103)
+}
+
+li{
+    list-style: none;
+}
+
+.leftItemsWidth{
+    width: 85%
+}

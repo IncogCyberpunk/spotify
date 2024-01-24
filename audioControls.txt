@@ -1,0 +1,41 @@
+     When you create a new Audio object in JavaScript, it has several properties that you can use to interact with and control audio playback. Here are some of the key properties of the Audio object:
+
+             currentTime:
+
+             Represents the current playback time of the audio, in seconds.
+             duration:
+
+             Returns the duration of the audio track in seconds.
+
+             paused:
+
+             Indicates whether the audio is paused. Returns true if paused, false if playing.
+
+             ended:
+
+             Indicates whether the audio playback has reached the end. Returns true if playback has ended.
+
+             volume:
+
+             Represents the volume level of the audio. It ranges from 0.0 (silent) to 1.0 (full volume).
+
+             muted:
+
+
+             Indicates whether the audio is muted. Returns true if muted, false if not muted.
+             
+             loop:
+
+             Represents whether the audio should play in a loop. If set to true, the audio will loop; otherwise, it won't.
+             src:
+
+             Represents the URL of the audio file.
+             }
+         const audioElement = new Audio('/songs/Giant.mp3');
+         console.log(audioElement.currentTime);  Get the current playback time
+         console.log(audioElement.duration);     Get the duration of the audio
+         console.log(audioElement.paused);       Check if the audio is paused
+         console.log(audioElement.volume);       Get the current volume level
+         console.log(audioElement.muted);        Check if the audio is muted
+         console.log(audioElement.loop);         Check if the audio is set to loop
+         console.log(audioElement.src);          Get the URL of the audio file
