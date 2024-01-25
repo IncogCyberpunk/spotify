@@ -77,6 +77,11 @@ button{
 
 
 @media screen and (width < 725px ) {
+    #entry{
+        position: relative;
+        right: 10px;
+    }
+
     #companyInfo a{
         font-size: 12px;
     }
@@ -87,16 +92,38 @@ button{
         gap: 0 10px;
     }
 
-    #playBar{
-        /* position: relative;
-        left: 0px; */
-    }
+    
 }
 
-@media screen and (width < 595px ) and (width >  475px) {
+@media screen and (width < 595px ) and (width > 460px)  {
     #companyInfo{
         display: flex;
         flex-direction: column;
+    }
+
+    #socials,#links{
+        margin: 0 auto;
+    }
+
+    #playBar{
+        /* right: 15px; */
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #links, #companyInfo{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    #links  h3{
+        font-size: 36px;
+    }
+    #links ul a {
+        font-size: 30px;
+    }
+
+    #socials{
+        margin: 10px auto;
     }
 }
 
