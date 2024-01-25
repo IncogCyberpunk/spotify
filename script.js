@@ -105,19 +105,20 @@ async function main() {
 
     // Attach event listener to previous, play and next
 
-    playSongBtn.addEventListener("click", () => {
-        if (currentSong.paused) {
-            currentSong.play();
-            playSongBtn.firstElementChild.src = "svg/pauseSong.svg"
-        }
-        else {
-            currentSong.pause();
-            playSongBtn.firstElementChild.src = "svg/playSong.svg"
-        }
-    })
+    // playSongBtn.addEventListener("click", () => {
+    //     if (currentSong.paused) {
+    //         currentSong.play();
+    //         playSongBtn.firstElementChild.src = "svg/pauseSong.svg"
+    //     }
+    //     else {
+    //         currentSong.pause();
+    //         playSongBtn.firstElementChild.src = "svg/playSong.svg"
+    //     }
+    // })
 
 
     // Add event listener to the seekbar
+    /*
     seekBar.addEventListener("click", (x) => {
         // getBoundingClientRect() gives us the dom Rectangle which can be used to place the circle of the seekbar whereever we click  the cursor on the seekbar
         // then we use that 
@@ -129,7 +130,8 @@ async function main() {
         // eg: percent returns 90 and if songDuration=255 seconds then (90 * 255)/100 would return 90% percent of the total song duration
         currentSong.currentTime= (percent * currentSong.duration)/100;
 
-    })
+    }) 
+    */
     
 
     // Add event listener to the hamburger Icon
