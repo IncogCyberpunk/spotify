@@ -72,7 +72,10 @@ button{
    #nav img:not(:first-child){
     display: none;
    }
-
+   
+   #copyrightText{
+    text-align: center;
+}
 }
 
 
@@ -125,9 +128,7 @@ button{
     #socials{
         margin: 10px auto;
     }
-    #copyrightText{
-        text-align: center;
-    }
+    
 }
 
 
