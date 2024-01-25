@@ -1,4 +1,4 @@
-console.log("Lets goooooo");
+alert("Lets goooooo");
 let currentSong = new Audio();
 
 
