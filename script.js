@@ -1,5 +1,5 @@
 alert("Lets goooooo");
-let currentSong = new Audio();
+// let currentSong = new Audio();
 
 
 function convertSecondsToMinutesAndSeconds(seconds) {
@@ -13,9 +13,9 @@ function convertSecondsToMinutesAndSeconds(seconds) {
     return minutes + ':' + remainingSeconds;
 }
 
-let randNum = (songs) => {
-    return Math.floor(0 + Math.random() * ((songs.length - 1) - 0))
-}
+// let randNum = (songs) => {
+//     return Math.floor(0 + Math.random() * ((songs.length - 1) - 0))
+// }
 
 
 // async function getSongs() {
@@ -40,65 +40,65 @@ let randNum = (songs) => {
 const playMusic = (track, pause = true) => {
     // currentSong is made a global variable so that if one of the song is already played then when clicking on another song another song starts playing instead of both of them playing at the same time
 
-    currentSong.src = "/songs/" + track + ".mp3"
-    if (pause) {
-        currentSong.play();
-        playSongBtn.firstElementChild.src = "svg/pauseSong.svg"
-    }
-    songInfo.innerHTML = decodeURI(track)
-    songTime.innerHTML = `00:00 / 00:00`
+//     currentSong.src = "/songs/" + track + ".mp3"
+//     if (pause) {
+//         currentSong.play();
+//         playSongBtn.firstElementChild.src = "svg/pauseSong.svg"
+//     }
+//     songInfo.innerHTML = decodeURI(track)
+//     songTime.innerHTML = `00:00 / 00:00`
 
-}
+// }
 
 
 async function main() {
 
     //Gets the list of all the songs
-    let songs = await getSongs();
+    // let songs = await getSongs();
 
     // Here false is passed as an argument becuase when we reload the page we only want the song's name to be shown and not the music to be played default so we passed false so that the music doesn't get played but the songName is displayed by default
 
-    playMusic(songs[randNum(songs)], false)
+    // playMusic(songs[randNum(songs)], false)
 
 
     // show all the songs in a playlist
-    let songAdd = document.querySelector('#songLibrary').getElementsByTagName("ul")[0];
-    for (const song of songs) {
-        songAdd.innerHTML += `
-        <li>
-        <div class="songCard flex  align-center ">
-            <img src="svg/music.svg" class="invert " alt="">
-            <div class="info">
-                <div class="musicName">${song.replaceAll("%20", " ")}</div>
-                <div class="musicArtist"> Aayush</div>
-            </div>
-            <div class="playNow  flex  ">
-                <span>Play Now</span>
-                <img src="svg/playSong.svg" class="invert" alt="">
-            </div>
-        </div></li>
-        `;
-    }
+    // let songAdd = document.querySelector('#songLibrary').getElementsByTagName("ul")[0];
+    // for (const song of songs) {
+    //     songAdd.innerHTML += `
+    //     <li>
+    //     <div class="songCard flex  align-center ">
+    //         <img src="svg/music.svg" class="invert " alt="">
+    //         <div class="info">
+    //             <div class="musicName">${song.replaceAll("%20", " ")}</div>
+    //             <div class="musicArtist"> Aayush</div>
+    //         </div>
+    //         <div class="playNow  flex  ">
+    //             <span>Play Now</span>
+    //             <img src="svg/playSong.svg" class="invert" alt="">
+    //         </div>
+    //     </div></li>
+    //     `;
+    // }
 
     // Attach an event listener to each songName in the library so that you can click at the song and play it.
 
-    Array.from(document.querySelector("#songLibrary").getElementsByTagName("li")).forEach(
-        (element) => {
-            element.addEventListener("click", () => {
-                console.log(element.querySelector(".musicName").innerHTML);
-                playMusic(element.querySelector(".musicName").innerHTML)
-            })
+    // Array.from(document.querySelector("#songLibrary").getElementsByTagName("li")).forEach(
+    //     (element) => {
+    //         element.addEventListener("click", () => {
+    //             console.log(element.querySelector(".musicName").innerHTML);
+    //             playMusic(element.querySelector(".musicName").innerHTML)
+    //         })
 
-        })
+    //     })
 
     // Listen for timeupdate event for seekbar
 
     // This timeupdate event is only triggred when the song starts playing
-    currentSong.addEventListener("timeupdate", () => {
-        console.log(currentSong.currentTime, currentSong.duration)
-        songTime.innerHTML = `${convertSecondsToMinutesAndSeconds(currentSong.currentTime)} / ${convertSecondsToMinutesAndSeconds(currentSong.duration)}`
-        circle.style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%"
-    })
+    // currentSong.addEventListener("timeupdate", () => {
+    //     console.log(currentSong.currentTime, currentSong.duration)
+    //     songTime.innerHTML = `${convertSecondsToMinutesAndSeconds(currentSong.currentTime)} / ${convertSecondsToMinutesAndSeconds(currentSong.duration)}`
+    //     circle.style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%"
+    // })
 
 
 
