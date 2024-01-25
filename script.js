@@ -1,4 +1,4 @@
-alert("Lets goooooo");
+alert("the changes are done");
 // let currentSong = new Audio();
 
 
