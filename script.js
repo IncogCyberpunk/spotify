@@ -18,24 +18,24 @@ let randNum = (songs) => {
 }
 
 
-async function getSongs() {
-    let receive = await fetch("http://127.0.0.1:5500/songs/")
-    let response = await receive.text();
+// async function getSongs() {
+//     let receive = await fetch("http://127.0.0.1:5500/songs/")
+//     let response = await receive.text();
 
-    let div = document.createElement("content");
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a")
-    let songs = []
+//     let div = document.createElement("content");
+//     div.innerHTML = response;
+//     let as = div.getElementsByTagName("a")
+//     let songs = []
 
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split("/songs/")[1].split('.mp3')[0])
-        }
+//     for (let index = 0; index < as.length; index++) {
+//         const element = as[index];
+//         if (element.href.endsWith(".mp3")) {
+//             songs.push(element.href.split("/songs/")[1].split('.mp3')[0])
+//         }
 
-    }
-    return songs
-}
+//     }
+//     return songs
+// }
 
 const playMusic = (track, pause = true) => {
     // currentSong is made a global variable so that if one of the song is already played then when clicking on another song another song starts playing instead of both of them playing at the same time
