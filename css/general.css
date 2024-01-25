@@ -125,6 +125,9 @@ button{
     #socials{
         margin: 10px auto;
     }
+    .rightSection > p {
+        text-align: center;
+    }
 }
 
 
