@@ -37,7 +37,7 @@ function convertSecondsToMinutesAndSeconds(seconds) {
 //     return songs
 // }
 
-const playMusic = (track, pause = true) => {
+// const playMusic = (track, pause = true) => {
     // currentSong is made a global variable so that if one of the song is already played then when clicking on another song another song starts playing instead of both of them playing at the same time
 
 //     currentSong.src = "/songs/" + track + ".mp3"
