@@ -51,7 +51,13 @@ button{
     width: fit-content;
    }
     
+   #links{
+    gap: 0 10px;
+   }
 
+   #companyInfo{
+    gap: 0 50px;
+   }
    .rightSection{
     width: 100vw;
    }
@@ -61,14 +67,17 @@ button{
    }
    
    #header{
-    width: 98vw;
+    width: 96vw;
    }
 
    #playBar{
     width: 95vw;
-    right: 11px;
+    right: 10px;
    }
 
+   #seekBar{
+    left: 9vw;
+   }
    #hamburgerIcon{
     display: block;
     width: 35px;
@@ -83,26 +92,77 @@ button{
     position: relative;
     right: 30px;
 }
+
+
 }
 
 
 @media screen and (width < 725px ) {
     #entry{
         position: relative;
-        right: 10px;
+        right: 30px;
     }
 
     #companyInfo a{
         font-size: 12px;
     }
     #companyInfo{
-        gap: 0 40px;
+        gap: 0 20px;
     }
     #links{
-        gap: 0 10px;
+        gap: 0 5px;
     }
 
+    #playBar{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        height: auto;
+        background-color: rgb(29,38,38);
+        padding: 20px 0;
+        border-radius: 12px;
+    }
+
+    #songInfo{
+        font-size: 24px;
+        font-weight: bold;
+        position: relative;
+        left: 0;
+        bottom: 0;    
+        letter-spacing: 1px;
+    }
+
+    #songTime{
+        position: relative;
+        right: 0;
+        left: 0;
+        font-size: 18px;
+    }
+
+    #seekBar{
+       position: initial;
+    }
+
+    #playBar button{
+        background-color: rgb(29,38,38);
+    }
     
+    #circle{
+        position: relative;
+    }
+    
+    #copyrightText{
+        margin-bottom: 200px;
+    }
+
+    #songButtons{
+        margin: 10px 0;
+    }
+
+    #playBar div:nth-child(3){
+        justify-content: center;
+        position: initial;
+    }
 }
 
 @media screen and (width < 595px ) and (width > 460px)  {
@@ -132,6 +192,15 @@ button{
     #socials{
         margin: 10px auto;
     }
+
+    #cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
     
 }
 

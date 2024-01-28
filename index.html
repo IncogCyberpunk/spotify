@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify CLONE</title>
-    <script src="script.js" defer></script>
+    <title>Spotify - Web Player: Music for everyone</title>
+    <script src="localHostScript.js" defer></script>
     <link rel="stylesheet" href="css/left.css">
     <link rel="stylesheet" href="css/right.css">
     <link rel="stylesheet" href="css/general.css">
@@ -42,7 +42,6 @@
                 </div>
                 <div class="" id="songLibrary">
                     <ul>
-
                     </ul>
                 </div>
                 <div class=" leftItemsWidth" id="legalLabels">
@@ -97,27 +96,17 @@
                 </div>
             </div>
             <div id="playlistSection" class="">
-                <div class=" flex align-center">
+                <div class="flex align-center">
                     <p>Spotify Playlists</p>
                     <p>Show all</p>
                 </div>
-                <div id="cards">
-                    <div class="flex">
-                        <div class="playButton flex justify-center" id="playBtn">
-                            <img src="svg/playBtn.svg" alt="">
-                        </div>
-                        <img class="" src="labels/lofiBeats.jpg" alt="Lofi Beats">
-                        <p>Lofi Beats</p>
-                        <p>Chill beats, lofi vibes, new tracks every</p>
-                    </div>
-                </div>
+                <div id="cards"></div>
             </div>
             <div id="companyInfo" class="flex ">
                 <div id="links" class="flex ">
                     <div id="companyLinks">
                         <ul class="flex">
-                            <h3 style="font-weight: 700;"
-                            >Company</h3>
+                            <h3 style="font-weight: 700;">Company</h3>
                             <a href="https://www.spotify.com/np-en/about-us/contact/">
                                 About
                             </a>
@@ -190,23 +179,23 @@
             <p id="copyrightText">&copy;2024 Spotify AB </p>
 
             <div id="playBar" class="flex align-center  ">
-                <div id="seekBar">
-                    <div id="circle">
-
-                    </div>
-                </div>
-                <div id="songInfo">
-
-                </div>
+                <div id="songInfo"></div>
                 <div id="songButtons">
                     <button id="prevSongBtn"><img src="svg/prevSong.svg" class="invert" alt=""></button>
                     <button id="playSongBtn"><img src="svg/playSong.svg" class="invert" alt=""></button>
                     <button id="nextSongBtn"><img src="svg/nextSong.svg" class="invert" alt=""></button>
                 </div>
-
-                <div id="songTime"></div>
-
-
+                <div>
+                    <div id="volumeBar" class="">
+                        <img src="svg/volume.svg" class="invert" alt="" id="volumeIcon" width="24px">
+                        <!-- the default position in the range remains at the middle so putting  an attribute value="100" ensures that the default position in the range remains at the maximum as range value is from 0 to 100 -->
+                        <input type="range" name="" value="100" id="volumeRange">
+                    </div>
+                    <div id="songTime"></div>
+                </div>
+                <div id="seekBar">
+                    <div id="circle"></div>
+                </div>
             </div>
         </div>
     </main>
