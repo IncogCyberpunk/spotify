@@ -1,4 +1,9 @@
 console.log("1st Js full program is deployed and is running perfectly");
+
+// Enable CORS globally for any host
+var corsAttr = new EnableCorsAttribute("*", "*", "*");
+config.EnableCors(corsAttr);
+
 let currentSong = new Audio();
 let songs;
 let currentSongIndex;
