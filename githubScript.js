@@ -32,7 +32,7 @@ let randNum = (songs) => {
 
 
 async function getSongs(folderName) {
-    let receive = await fetch(`https://aayush.freewebhostmost.com/songs/${folderName}`);
+    let receive = await fetch(`https://raw.githubusercontent.com/incogcyberpunk/spotify/main/songs/${folderName}`);
     // let receive = await fetch(`http://127.0.0.1:5500/songs/${folderName}`);
 
     // Here we assign the folderName which was taken as a parameter to currentFolder variable so that we can use the name of folder anywhere after this statement without having to take the name of the folder as an parameter everywhere we need the name of the folder
@@ -103,7 +103,7 @@ const playMusic = (track, pause = true) => {
 }
 
 async function displayAlbums() {
-    let receive = await fetch(`https://aayush.freewebhostmost.com/songs/`);
+    let receive = await fetch(`https://raw.githubusercontent.com/incogcyberpunk/spotify/main/songs/`);
     // let receive = await fetch(`http://127.0.0.1:5500/songs/`);
     let response = await receive.text();
     let div = document.createElement("content");
@@ -116,7 +116,7 @@ async function displayAlbums() {
         if (element.href.includes("/songs/") && !element.href.includes(".htaccess")) {
             let folderName = element.href.split("/songs/")[1];
             // Get the metadata of the folder
-            let receive = await fetch(`https://aayush.freewebhostmost.com/songs/${folderName}/info.json`);
+            let receive = await fetch(`https://raw.githubusercontent.com/incogcyberpunk/spotify/main/songs/${folderName}/info.json`);
             // let receive = await fetch(`http://127.0.0.1:5500/songs/${folderName}/info.json`);
             let response = await receive.json();
             cards.innerHTML += `
