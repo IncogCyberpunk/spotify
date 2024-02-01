@@ -1,4 +1,4 @@
 Options -Indexes +ExecCGI
 AddHandler cgi-script .cgi .pl
-Header Set Access-Control-Allow-Origin https://incogcyberpunk.github.io/spotify/
+Header Set Access-Control-Allow-Origin "*"
 Header Set Access-Control-Request-Method: POST, GET
